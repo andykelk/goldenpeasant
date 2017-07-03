@@ -1,6 +1,6 @@
 require 'redd'
 require 'nokogiri'
-require 'Faraday'
+require 'faraday'
 require 'yaml'
 require 'logger'
 
