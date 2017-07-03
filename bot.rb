@@ -1,5 +1,6 @@
 require 'redd'
-require 'feedjira/podcast'
+require 'nokogiri'
+require 'Faraday'
 require 'yaml'
 require 'logger'
 
@@ -23,17 +24,21 @@ reddit = Redd.it(
 logger.debug "Connected to reddit as #{credentials[:username]}"
 
 feeds.each do |name, url|
-  xml = Faraday.get(url).body
   logger.debug "Fetching #{url}"
-  feed = Feedjira::Feed.parse xml
+  html = Faraday.get(url).body
+  feed = Nokogiri::HTML(html)
+  feed_title = feed.at_css("meta[@property='og:title']")['content']
+  feed_title.gsub!(/ - Gimlet Media$/i, '')
 
-  feed.items.each do |item|
+  feed.css('h3.list__item__title').each do |item|
+    url = item.at_css('a')['href']
+    title = item.at_css('a').content
     seen[name] ||= {}
-    logger.debug "Guid #{item.guid.guid} seen: #{seen[name][item.guid.guid]}}"
-    unless seen[name][item.guid.guid]
-      logger.info "New episode #{item.guid.guid} for #{feed.title} - #{item.title}"
-      reddit.subreddit('gimlet').submit("#{feed.title} - #{item.title}", url: item.enclosure.url.to_s, sendreplies: false)
-      seen[name][item.guid.guid] = true
+    logger.debug "URL #{url} seen: #{seen[name][url]}}"
+    unless seen[name][url]
+      logger.info "New episode #{url} for #{feed_title} - #{title}"
+      reddit.subreddit('gimlet').submit("#{feed_title} - #{title}", url: url, sendreplies: false)
+      seen[name][url] = true
     end
   end
 end

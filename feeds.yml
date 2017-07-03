@@ -1,11 +1,11 @@
 ---
-:replyall: http://feeds.gimletmedia.com/hearreplyall
-:startup: http://feeds.gimletmedia.com/hearstartup
-:crimetown: http://feeds.gimletmedia.com/crimetownshow
-:hevyweight: http://feeds.gimletmedia.com/heavyweightpodcast
-:thepitch: http://feeds.gimletmedia.com/thepitchshow
-:elt: http://feeds.gimletmedia.com/eltshow
-:mogul: http://feeds.gimletmedia.com/mogulshow
-:sciencevs: http://feeds.gimletmedia.com/sciencevs
-:homecoming: http://feeds.gimletmedia.com/homecomingshow
-:thenod: http://feeds.gimletmedia.com/thenodshow
+:replyall: https://gimletmedia.com/show/reply-all/all/
+:startup: https://gimletmedia.com/show/startup/all/
+:crimetown: https://gimletmedia.com/show/crimetown/all/
+:hevyweight: https://gimletmedia.com/show/heavyweight/all/
+:thepitch: https://gimletmedia.com/show/thepitch/all/
+:elt: https://gimletmedia.com/show/every-little-thing/all/
+:mogul: https://gimletmedia.com/show/mogul/all/
+:sciencevs: https://gimletmedia.com/show/science-vs/all/
+:homecoming: https://gimletmedia.com/show/homecoming/all/
+:thenod: https://gimletmedia.com/show/the-nod/all/

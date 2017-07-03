@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
 gem "redd"
-gem "feedjira-podcast"
+gem "nokogiri"
+gem "faraday"
