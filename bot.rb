@@ -37,8 +37,13 @@ feeds.each do |name, url|
     logger.debug "URL #{url} seen: #{seen[name][url]}}"
     unless seen[name][url]
       logger.info "New episode #{url} for #{feed_title} - #{title}"
-      reddit.subreddit('gimlet').submit("#{feed_title} - #{title}", url: url, sendreplies: false)
-      seen[name][url] = true
+      begin
+        reddit.subreddit('gimlet').submit("#{feed_title} - #{title}", url: url, sendreplies: false)
+      rescue Redd::APIError =>
+        raise unless e.message =~ /already been submitted/
+      ensure
+        seen[name][url] = true
+      end
     end
   end
 end
