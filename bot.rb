@@ -5,7 +5,7 @@ require 'yaml'
 require 'logger'
 
 $logger = Logger.new 'goldenpeasant.log'
-$logger.sev_threshold = Logger::DEBUG
+$logger.sev_threshold = Logger::INFO
 
 $logger.info "Starting check"
 
@@ -13,7 +13,7 @@ feeds = YAML::load_file('feeds.yml')
 $seen = YAML::load_file('state.yml')
 credentials = YAML::load_file('credentials.yml')
 
-reddit = Redd.it(
+$reddit = Redd.it(
   user_agent: 'Redd:GoldenPheasant:v1.0.0 (by /u/mopoke)',
   client_id:  credentials[:client_id],
   secret:     credentials[:secret],
@@ -50,8 +50,8 @@ def check_url(url, title, feed_title, feed_name)
   unless $seen[feed_name][url]
     $logger.info "New episode #{url} for #{feed_title} - #{title}"
     begin
-      reddit.subreddit('gimlet').submit("#{feed_title} - #{title}", url: url, sendreplies: false)
-    rescue Redd::APIError =>
+      $reddit.subreddit('gimlet').submit("#{feed_title} - #{title}", url: url, sendreplies: false)
+    rescue Redd::APIError => e
       raise unless e.message =~ /already been submitted/
     ensure
       $seen[feed_name][url] = true
