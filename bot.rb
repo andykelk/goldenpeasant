@@ -25,7 +25,7 @@ $logger.debug "Connected to reddit as #{credentials[:username]}"
 
 def process_gimlet(feed, feed_name, feed_url)
   feed_title = feed.at_css("meta[@property='og:title']")['content']
-  feed_title.gsub!(/ - Gimlet Media$/i, '')
+  feed_title.gsub!(/ (?:-|by) Gimlet Media$/i, '')
 
   feed.css('h3.list__item__title').each do |item|
     url = item.at_css('a')['href']
