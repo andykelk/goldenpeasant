@@ -12,7 +12,7 @@ class Feed
   def initialize(name, url, seen)
     @name = name
     @url = url
-    @seen = seen
+    @seen = seen || {}
   end
 
   def fetch_new
