@@ -1,3 +1,5 @@
+require 'URI'
+
 module Parser
   class Overcast
     def parse(feed, feed_url)

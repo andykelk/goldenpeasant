@@ -1,3 +1,5 @@
+require 'URI'
+
 module Parser
   class GimletMedia
     def parse(feed, feed_url)
