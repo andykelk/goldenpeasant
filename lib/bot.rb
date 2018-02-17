@@ -2,7 +2,7 @@ require 'yaml'
 require './lib/logging'
 require './lib/feed'
 require './lib/notifier/reddit'
-require './lib/notifier/null'
+require './lib/notifier/stdout'
 
 class Bot
   include Logging

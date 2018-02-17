@@ -1,4 +1,5 @@
 require 'redd'
+require './lib/logging'
 
 module Notifier
   class Reddit

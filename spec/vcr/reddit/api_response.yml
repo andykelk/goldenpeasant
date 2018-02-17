@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.reddit.com/api/v1/access_token
+    body:
+      encoding: US-ASCII
+      string: grant_type=password&username=blah&password=password
+    headers:
+      User-Agent:
+      - Redd:GoldenPheasant:v1.0.0 (by /u/mopoke)
+      Authorization:
+      - Basic aAaAaaAaaaAAaaAAAaaAAAAAAaAAAAAAAAAAAAAaaaaaaAAaaaAAa
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '63'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Set-Cookie:
+      - edgebucket=35VrvfV7xFCguPpwIt; Domain=reddit.com; Max-Age=63071999; Path=/;  secure
+      - session_tracker=aaaaaaaaaaaaaaaaaaaaaaaaaaa;
+        Domain=reddit.com; Max-Age=7199; Path=/; expires=Sat, 17-Feb-2018 08:30:55
+        GMT; secure
+      Cache-Control:
+      - max-age=0, must-revalidate
+      X-Moose:
+      - majestic
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Content-Length:
+      - '105'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 17 Feb 2018 06:30:55 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-syd18928-SYD
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1518849055.612915,VS0,VE1250
+      Server:
+      - snooserv
+    body:
+      encoding: UTF-8
+      string: '{"access_token": "-mEcqnMAOT_Hd_XUsZsLRKCYSDo", "token_type": "bearer",
+        "expires_in": 3600, "scope": "*"}'
+    http_version: 
+  recorded_at: Sat, 17 Feb 2018 06:30:55 GMT
+- request:
+    method: post
+    uri: https://oauth.reddit.com/api/submit?api_type=json&raw_json=1
+    body:
+      encoding: US-ASCII
+      string: title=Monkey&sr=gimlet&resubmit=false&sendreplies=false&kind=link&url=http%3A%2F%2Fmonkey.com%2F
+    headers:
+      User-Agent:
+      - Redd:GoldenPheasant:v1.0.0 (by /u/mopoke)
+      Authorization:
+      - Bearer -mEcqnMAOT_Hd_XUsZsLRKCYSDo
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '96'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Ua-Compatible:
+      - IE=edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Expires:
+      - "-1"
+      Cache-Control:
+      - private, s-maxage=0, max-age=0, must-revalidate, max-age=0, must-revalidate
+      X-Ratelimit-Remaining:
+      - '599.0'
+      X-Ratelimit-Used:
+      - '1'
+      X-Ratelimit-Reset:
+      - '544'
+      Set-Cookie:
+      - edgebucket=SVym8FYFGGi4BTY30d; Domain=reddit.com; Max-Age=63071999; Path=/;  secure
+      - loid=0000000000000xg262.2.1461597511071.Z0FBQUFBQmFoOHdnNUNiaVVvVlpUZmVJRDRfWFdBYVF2dTVGaUdRVTNnek9OX0xucS1KdmdoaVZ6aDQ0NlZWc0RKNTFEYjRZVjR3TzRscnZqLW1pZGFHQ3NMa3loSWlRY0NUaEpTbzdEM3dCRV94eHh5RVpPTS01Mi1GdGgwMkk5andSU3ZnM2VjN1c;
+        Domain=reddit.com; Max-Age=63071999; Path=/; expires=Mon, 17-Feb-2020 06:30:56
+        GMT; secure
+      - session_tracker=aaaaaaaaaaaaaaaaaaaaaaaaaaa;
+        Domain=reddit.com; Max-Age=7199; Path=/; expires=Sat, 17-Feb-2018 08:30:56
+        GMT; secure
+      X-Moose:
+      - majestic
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      Content-Length:
+      - '137'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sat, 17 Feb 2018 06:30:57 GMT
+      Via:
+      - 1.1 varnish
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-syd18933-SYD
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1518849056.034259,VS0,VE1071
+      Server:
+      - snooserv
+    body:
+      encoding: UTF-8
+      string: '{"json": {"errors": [], "data": {"url": "https://www.reddit.com/r/gimlet/comments/7y537h/monkey/",
+        "id": "7y537h", "name": "t3_7y537h"}}}'
+    http_version: 
+  recorded_at: Sat, 17 Feb 2018 06:30:57 GMT
+recorded_with: VCR 4.0.0

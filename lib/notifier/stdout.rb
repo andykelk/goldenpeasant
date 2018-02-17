@@ -1,5 +1,5 @@
 module Notifier
-  class Null
+  class Stdout
     def notify title, url
       puts "#{url}\t#{title}"
     end
