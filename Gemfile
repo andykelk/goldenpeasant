@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem "redd"
-gem "nokogiri"
+gem "nokogiri", '~> 1.8.1'
 gem "faraday"
 
 group :development do

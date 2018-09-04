@@ -20,10 +20,10 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.3)
     http_parser.rb (0.6.0)
-    mini_portile2 (2.2.0)
+    mini_portile2 (2.3.0)
     multipart-post (2.0.0)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     public_suffix (2.0.5)
     redd (0.8.8)
       http (~> 2.2)
@@ -55,7 +55,7 @@ PLATFORMS
 
 DEPENDENCIES
   faraday
-  nokogiri
+  nokogiri (~> 1.8.1)
   redd
   rspec
   vcr
