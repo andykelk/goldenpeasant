@@ -2,6 +2,7 @@ require 'nokogiri'
 require 'faraday'
 require './lib/parser/gimlet_media'
 require './lib/parser/overcast'
+require './lib/parser/spotify'
 
 class Feed
   include Logging
@@ -21,6 +22,8 @@ class Feed
     feed = Nokogiri::HTML(html)
     if @url =~ /overcast\.fm/
       parser = Parser::Overcast.new
+    elsif @url =~ /spotify\.com/
+      parser = Parser::Spotify.new
     else
       parser = Parser::GimletMedia.new
     end

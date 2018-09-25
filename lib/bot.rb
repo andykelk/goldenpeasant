@@ -20,7 +20,7 @@ class Bot
       @feeds << Feed.new(feed_name, feed_url, (seen.class == Hash && seen.key?(feed_name) ? seen[feed_name] : {}))
     end
     if options[:debug]
-      @notifier = Notifier::Null.new()
+      @notifier = Notifier::Stdout.new()
     else
       @notifier = Notifier::Reddit.new(credentials)
     end
