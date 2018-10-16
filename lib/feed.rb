@@ -7,39 +7,44 @@ require './lib/parser/spotify'
 class Feed
   include Logging
 
-  attr_reader :seen
-  attr_reader :name
+  attr_accessor :seen, :name, :url
 
-  def initialize(name, url, seen)
-    @name = name
-    @url = url
-    @seen = seen || {}
+  def initialize(**opts)
+    @name, @url, @seen = opts.values_at(:name, :url, :seen)
+    @seen ||= {}
+    validate!
   end
 
   def fetch_new
-    logger.debug "Fetching #{@url}"
-    html = Faraday.get(@url).body
-    feed = Nokogiri::HTML(html)
-    if @url =~ /overcast\.fm/
-      parser = Parser::Overcast.new
-    elsif @url =~ /spotify\.com/
-      parser = Parser::Spotify.new
-    else
-      parser = Parser::GimletMedia.new
-    end
-    filter_seen(parser.parse(feed, @url))
+    logger.debug "Fetching #{url}"
+    feed = Nokogiri::HTML(Faraday.get(url).body)
+    parser = if url =~ /overcast\.fm/
+               Parser::Overcast.new
+             elsif url =~ /spotify\.com/
+               Parser::Spotify.new
+             else
+               Parser::GimletMedia.new
+             end
+    filter_seen(parser.parse(feed, url))
   end
 
   def filter_seen(items)
     new_items = []
     items.each do |item|
-      logger.debug "URL #{item[:url]} seen: #{@seen[item[:url]]}}"
-      unless @seen[item[:url]]
-        logger.info "New episode #{item[:url]} for #{@name}"
-        new_items << item
-        @seen[item[:url]] = true
-      end
+      logger.debug "URL #{item[:url]} seen: #{seen[item[:url]]}}"
+      next if seen[item[:url]]
+
+      logger.info "New episode #{item[:url]} for #{name}"
+      new_items << item
+      seen[item[:url]] = true
     end
     new_items
+  end
+
+  private
+
+  def validate!
+    raise 'Missing name' if name.nil?
+    raise 'Missing url' if url.nil?
   end
 end

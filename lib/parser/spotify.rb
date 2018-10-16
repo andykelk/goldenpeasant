@@ -10,7 +10,7 @@ module Parser
         a = item.at_css('a')
         url = URI.join(feed_url, a['href']).to_s
         title = item.at_css('span.track-name').content
-        items << {url: url, title: "#{feed_title} - #{title}"}
+        items << { url: url, title: "#{feed_title} - #{title}" }
       end
       items
     end

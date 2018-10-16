@@ -1,19 +1,37 @@
 ---
-:replyall: https://www.gimletmedia.com/reply-all/all
-:startup: https://www.gimletmedia.com/startup/all
-:crimetown: https://open.spotify.com/show/5C9yXrX999QNS1Q62IlXvc
-:hevyweight: https://www.gimletmedia.com/heavyweight/all
-:thepitch: https://www.gimletmedia.com/the-pitch/all
-:elt: https://www.gimletmedia.com/every-little-thing/all
-:mogul: https://www.gimletmedia.com/mogul/all
-:sciencevs: https://www.gimletmedia.com/science-vs/all
-:homecoming: https://www.gimletmedia.com/homecoming/all
-:thenod: https://www.gimletmedia.com/the-nod/all
-:uncivil: http://www.gimletmedia.com/uncivil/all
-:storypirates: http://www.gimletmedia.com/story-pirates/all
-:habitat: https://www.gimletmedia.com/the-habitat/all
-:sandra: https://www.gimletmedia.com/sandra/all
-:wecametowin: https://www.gimletmedia.com/we-came-to-win/all
-:withoutfail: https://www.gimletmedia.com/without-fail/all
-:thecutontuesdays: https://www.gimletmedia.com/the-cut-on-tuesdays/all
-:doloresroach: https://www.gimletmedia.com/dolores-roach/all
+:replyall:
+  :url: https://www.gimletmedia.com/reply-all/all
+:startup:
+  :url: https://www.gimletmedia.com/startup/all
+:crimetown:
+  :url: https://open.spotify.com/show/5C9yXrX999QNS1Q62IlXvc
+:hevyweight:
+  :url: https://www.gimletmedia.com/heavyweight/all
+:thepitch:
+  :url: https://www.gimletmedia.com/the-pitch/all
+:elt:
+  :url: https://www.gimletmedia.com/every-little-thing/all
+:mogul:
+  :url: https://www.gimletmedia.com/mogul/all
+:sciencevs:
+  :url: https://www.gimletmedia.com/science-vs/all
+:homecoming:
+  :url: https://www.gimletmedia.com/homecoming/all
+:thenod:
+  :url: https://www.gimletmedia.com/the-nod/all
+:uncivil:
+  :url: http://www.gimletmedia.com/uncivil/all
+:storypirates:
+  :url: http://www.gimletmedia.com/story-pirates/all
+:habitat:
+  :url: https://www.gimletmedia.com/the-habitat/all
+:sandra:
+  :url: https://www.gimletmedia.com/sandra/all
+:wecametowin:
+  :url: https://www.gimletmedia.com/we-came-to-win/all
+:withoutfail:
+  :url: https://www.gimletmedia.com/without-fail/all
+:thecutontuesdays:
+  :url: https://www.gimletmedia.com/the-cut-on-tuesdays/all
+:doloresroach:
+  :url: https://www.gimletmedia.com/dolores-roach/all

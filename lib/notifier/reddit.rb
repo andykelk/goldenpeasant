@@ -4,7 +4,10 @@ require './lib/logging'
 module Notifier
   class Reddit
     include Logging
-    def initialize(credentials) 
+
+    attr_reader :reddit
+
+    def initialize(credentials)
       @reddit = Redd.it(
         user_agent: 'Redd:GoldenPheasant:v1.0.0 (by /u/mopoke)',
         client_id:  credentials[:client_id],
@@ -15,13 +18,12 @@ module Notifier
       logger.debug "Connected to reddit as #{credentials[:username]}"
     end
 
-    def notify title, url
+    def notify(title, url)
       begin
-        @reddit.subreddit('gimlet').submit(title, url: url, sendreplies: false)
+        reddit.subreddit('gimlet').submit(title, url: url, sendreplies: false)
       rescue Redd::APIError => e
         raise unless e.message =~ /already been submitted/
       end
     end
   end
 end
-
