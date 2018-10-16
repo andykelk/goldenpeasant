@@ -24,8 +24,9 @@ module Notifier
       end
     end
 
-    def notify(title, url)
-      status = "#{title} (#{url})"
+    def notify(item)
+      status = item.feed.has_twitter? ? "New from @#{item.feed.twitter_handle}: " : ''
+      status << "#{item.title} (#{item.url})"
       response = conn.post do |req|
         url = "https://api.twitter.com/1.1/statuses/update.json"
         req.url url

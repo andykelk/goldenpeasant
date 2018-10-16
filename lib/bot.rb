@@ -21,7 +21,7 @@ class Bot
     feeds.each do |feed|
       feed.fetch_new.each do |item|
         notifiers.each do |notifier|
-          notifier.notify(item[:title], item[:url])
+          notifier.notify(item)
         end
       end
     end
@@ -36,7 +36,7 @@ class Bot
     @feeds = []
     feeds.each do |feed_name, feed|
       @feeds << Feed.new(
-        name: feed_name, url: feed[:url],
+        name: feed_name, url: feed[:url], twitter_handle: feed[:twitter],
         seen: (seen.class == Hash && seen.key?(feed_name) ? seen[feed_name] : {})
       )
     end

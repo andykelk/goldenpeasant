@@ -18,9 +18,9 @@ module Notifier
       logger.debug "Connected to reddit as #{credentials[:username]}"
     end
 
-    def notify(title, url)
+    def notify(item)
       begin
-        reddit.subreddit('gimlet').submit(title, url: url, sendreplies: false)
+        reddit.subreddit('gimlet').submit(item.title, url: item.url, sendreplies: false)
       rescue Redd::APIError => e
         raise unless e.message =~ /already been submitted/
       end

@@ -1,28 +1,39 @@
 ---
 :replyall:
   :url: https://www.gimletmedia.com/reply-all/all
+  :twitter: replyall
 :startup:
   :url: https://www.gimletmedia.com/startup/all
+  :twitter: podcaststartup
 :crimetown:
   :url: https://open.spotify.com/show/5C9yXrX999QNS1Q62IlXvc
+  :twitter: crimetown
 :hevyweight:
   :url: https://www.gimletmedia.com/heavyweight/all
+  :twitter: heavyweight
 :thepitch:
   :url: https://www.gimletmedia.com/the-pitch/all
+  :twitter: thepitchshow
 :elt:
   :url: https://www.gimletmedia.com/every-little-thing/all
+  :twitter: eltshow
 :mogul:
   :url: https://www.gimletmedia.com/mogul/all
 :sciencevs:
   :url: https://www.gimletmedia.com/science-vs/all
+  :twitter: sciencevs
 :homecoming:
   :url: https://www.gimletmedia.com/homecoming/all
+  :twitter: HomecomingShow
 :thenod:
   :url: https://www.gimletmedia.com/the-nod/all
+  :twitter: thenodshow
 :uncivil:
   :url: http://www.gimletmedia.com/uncivil/all
+  :twitter: uncivilshow
 :storypirates:
   :url: http://www.gimletmedia.com/story-pirates/all
+  :twitter: storypirates
 :habitat:
   :url: https://www.gimletmedia.com/the-habitat/all
 :sandra:
@@ -33,5 +44,6 @@
   :url: https://www.gimletmedia.com/without-fail/all
 :thecutontuesdays:
   :url: https://www.gimletmedia.com/the-cut-on-tuesdays/all
+  :twitter: TheCut
 :doloresroach:
   :url: https://www.gimletmedia.com/dolores-roach/all

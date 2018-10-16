@@ -1,15 +1,17 @@
 require 'uri'
+require './lib/item'
 
 module Parser
   class Overcast
-    def parse(feed, feed_url)
+    def parse(**opts)
+      feed, html = opts.values_at(:feed, :html)
       items = []
-      feed_title = feed.at_css('h2.centertext').content
+      feed_title = html.at_css('h2.centertext').content
 
-      feed.css('a.usernewepisode').each do |item|
-        url = URI.join(feed_url, item['href']).to_s
+      html.css('a.usernewepisode').each do |item|
+        url = URI.join(feed.url, item['href']).to_s
         title = item.at_css('div.title').content
-        items << { url: url, title: "#{feed_title} - #{title}" }
+        items << Item.new(url: url, title: "#{feed_title} - #{title}", feed: feed)
       end
       items
     end
