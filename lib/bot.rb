@@ -36,7 +36,7 @@ class Bot
     @feeds = []
     feeds.each do |feed_name, feed|
       @feeds << Feed.new(
-        name: feed_name, url: feed[:url], twitter_handle: feed[:twitter],
+        name: feed_name, url: feed[:url], twitter_handle: feed[:twitter], flair: feed[:flair],
         seen: (seen.class == Hash && seen.key?(feed_name) ? seen[feed_name] : {})
       )
     end
