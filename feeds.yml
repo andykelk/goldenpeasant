@@ -2,48 +2,66 @@
 :replyall:
   :url: https://www.gimletmedia.com/reply-all/all
   :twitter: replyall
+  :flair: Reply All
 :startup:
   :url: https://www.gimletmedia.com/startup/all
   :twitter: podcaststartup
+  :flair: StartUp
 :crimetown:
   :url: https://open.spotify.com/show/5C9yXrX999QNS1Q62IlXvc
   :twitter: crimetown
+  :flair: Crimetown
 :hevyweight:
   :url: https://www.gimletmedia.com/heavyweight/all
   :twitter: heavyweight
+  :flair: Heavyweight
 :thepitch:
   :url: https://www.gimletmedia.com/the-pitch/all
   :twitter: thepitchshow
+  :flair: The Pitch
 :elt:
   :url: https://www.gimletmedia.com/every-little-thing/all
   :twitter: eltshow
+  :flair: ELT
 :mogul:
   :url: https://www.gimletmedia.com/mogul/all
+  :flair: Mogul
 :sciencevs:
   :url: https://www.gimletmedia.com/science-vs/all
   :twitter: sciencevs
+  :flair: Science vs
 :homecoming:
   :url: https://www.gimletmedia.com/homecoming/all
   :twitter: HomecomingShow
+  :flair: Homecoming
 :thenod:
   :url: https://www.gimletmedia.com/the-nod/all
   :twitter: thenodshow
+  :flair: The Nod
 :uncivil:
   :url: http://www.gimletmedia.com/uncivil/all
   :twitter: uncivilshow
+  :flair: Uncivil
 :storypirates:
   :url: http://www.gimletmedia.com/story-pirates/all
   :twitter: storypirates
+  :flair: Story Pirates
 :habitat:
   :url: https://www.gimletmedia.com/the-habitat/all
+  :flair: The Habitat
 :sandra:
   :url: https://www.gimletmedia.com/sandra/all
+  :flair: Sandra
 :wecametowin:
   :url: https://www.gimletmedia.com/we-came-to-win/all
+  :flair: We Came To Win
 :withoutfail:
   :url: https://www.gimletmedia.com/without-fail/all
+  :flair: Without Fail
 :thecutontuesdays:
   :url: https://www.gimletmedia.com/the-cut-on-tuesdays/all
   :twitter: TheCut
+  :flair: The Cut on Tuesdays
 :doloresroach:
   :url: https://www.gimletmedia.com/dolores-roach/all
+  :flair: The Horror of Dolores Roach

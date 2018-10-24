@@ -7,10 +7,10 @@ require './lib/parser/spotify'
 class Feed
   include Logging
 
-  attr_accessor :seen, :name, :url, :twitter_handle
+  attr_accessor :seen, :name, :url, :twitter_handle, :flair
 
   def initialize(**opts)
-    @name, @url, @seen, @twitter_handle = opts.values_at(:name, :url, :seen, :twitter_handle)
+    @name, @url, @seen, @twitter_handle, @flair = opts.values_at(:name, :url, :seen, :twitter_handle, :flair)
     @seen ||= {}
     validate!
   end
@@ -50,5 +50,6 @@ class Feed
   def validate!
     raise 'Missing name' if name.nil?
     raise 'Missing url' if url.nil?
+    raise 'Missing flair' if flair.nil?
   end
 end

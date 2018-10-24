@@ -20,7 +20,8 @@ module Notifier
 
     def notify(item)
       begin
-        reddit.subreddit('gimlet').submit(item.title, url: item.url, sendreplies: false)
+        link = reddit.subreddit('gimlet').submit(item.title, url: item.url, sendreplies: false)
+        reddit.subreddit('gimlet').set_flair(link, item.feed.flair)
       rescue Redd::APIError => e
         raise unless e.message =~ /already been submitted/
       end
