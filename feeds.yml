@@ -1,10 +1,10 @@
 ---
 :replyall:
-  :url: https://www.gimletmedia.com/reply-all/all
+  :url: https://gimletmedia.com/shows/reply-all/episodes
   :twitter: replyall
   :flair: Reply All
 :startup:
-  :url: https://www.gimletmedia.com/startup/all
+  :url: https://gimletmedia.com/shows/startup/episodes
   :twitter: podcaststartup
   :flair: StartUp
 :crimetown:
@@ -12,56 +12,62 @@
   :twitter: crimetown
   :flair: Crimetown
 :hevyweight:
-  :url: https://www.gimletmedia.com/heavyweight/all
+  :url: https://gimletmedia.com/shows/heavyweight/episodes
   :twitter: heavyweight
   :flair: Heavyweight
 :thepitch:
-  :url: https://www.gimletmedia.com/the-pitch/all
+  :url: https://gimletmedia.com/shows/the-pitch/episodes
   :twitter: thepitchshow
   :flair: The Pitch
 :elt:
-  :url: https://www.gimletmedia.com/every-little-thing/all
+  :url: https://gimletmedia.com/shows/every-little-thing/episodes
   :twitter: eltshow
   :flair: ELT
 :mogul:
-  :url: https://www.gimletmedia.com/mogul/all
+  :url: https://gimletmedia.com/shows/mogul/episodes
   :flair: Mogul
 :sciencevs:
-  :url: https://www.gimletmedia.com/science-vs/all
+  :url: https://gimletmedia.com/shows/science-vs/episodes
   :twitter: sciencevs
   :flair: Science vs
 :homecoming:
-  :url: https://www.gimletmedia.com/homecoming/all
+  :url: https://gimletmedia.com/shows/homecoming/episodes
   :twitter: HomecomingShow
   :flair: Homecoming
 :thenod:
-  :url: https://www.gimletmedia.com/the-nod/all
+  :url: https://gimletmedia.com/shows/the-nod/episodes
   :twitter: thenodshow
   :flair: The Nod
 :uncivil:
-  :url: http://www.gimletmedia.com/uncivil/all
+  :url: https://gimletmedia.com/shows/uncivil/episodes
   :twitter: uncivilshow
   :flair: Uncivil
 :storypirates:
-  :url: http://www.gimletmedia.com/story-pirates/all
+  :url: https://gimletmedia.com/shows/story-pirates/episodes
   :twitter: storypirates
   :flair: Story Pirates
 :habitat:
-  :url: https://www.gimletmedia.com/the-habitat/all
+  :url: https://gimletmedia.com/shows/the-habitat/episodes
   :flair: The Habitat
 :sandra:
-  :url: https://www.gimletmedia.com/sandra/all
+  :url: https://gimletmedia.com/shows/sandra/episodes
   :flair: Sandra
 :wecametowin:
-  :url: https://www.gimletmedia.com/we-came-to-win/all
+  :url: https://gimletmedia.com/shows/we-came-to-win/episodes
   :flair: We Came To Win
 :withoutfail:
-  :url: https://www.gimletmedia.com/without-fail/all
+  :url: https://gimletmedia.com/shows/without-fail/episodes
   :flair: Without Fail
 :thecutontuesdays:
-  :url: https://www.gimletmedia.com/the-cut-on-tuesdays/all
+  :url: https://gimletmedia.com/shows/the-cut-on-tuesdays/episodes
   :twitter: TheCut
   :flair: The Cut on Tuesdays
 :doloresroach:
-  :url: https://www.gimletmedia.com/dolores-roach/all
+  :url: https://gimletmedia.com/shows/dolores-roach/episodes
   :flair: The Horror of Dolores Roach
+:conviction:
+  :url: https://gimletmedia.com/shows/conviction/episodes
+  :flair: Conviction
+:motherhoodsessions:
+  :url: https://gimletmedia.com/shows/motherhood-sessions/episodes
+  :flair: Motherhood Sessions
