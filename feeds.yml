@@ -3,10 +3,6 @@
   :url: https://gimletmedia.com/shows/reply-all/episodes
   :twitter: replyall
   :flair: Reply All
-:startup:
-  :url: https://gimletmedia.com/shows/startup/episodes
-  :twitter: podcaststartup
-  :flair: StartUp
 :crimetown:
   :url: https://open.spotify.com/show/5C9yXrX999QNS1Q62IlXvc
   :twitter: crimetown
@@ -66,8 +62,29 @@
   :url: https://gimletmedia.com/shows/dolores-roach/episodes
   :flair: The Horror of Dolores Roach
 :conviction:
-  :url: https://gimletmedia.com/shows/conviction/episodes
+  :url: https://open.spotify.com/show/2XquJlPU9ibLYZMH0ZzFwA
   :flair: Conviction
 :motherhoodsessions:
   :url: https://gimletmedia.com/shows/motherhood-sessions/episodes
   :flair: Motherhood Sessions
+:theclearing:
+  :url: https://gimletmedia.com/shows/the-clearing/episodes
+  :flair: The Clearing
+:motherhacker:
+  :url: https://gimletmedia.com/shows/motherhacker/episodes
+  :flair: Motherhacker
+:howswork:
+  :url: https://open.spotify.com/show/0P13JasQfVZ1RiDCMZMYNU
+  :flair: How's Work?
+:scaredycats:
+  :url: https://open.spotify.com/show/3VrlfhxeItVL0o1rccJU1H
+  :flair: The Scaredy Cats Horror Show
+:whereshouldwebegin:
+  :url: https://open.spotify.com/show/3fKOTwtnX5oZLaiNntKWAV?si=zQoDobcOSPy48pihCmkYHA
+  :flair: Where Should We Begin?
+:sohelpme:
+  :url: https://open.spotify.com/show/3xPRJvSzSmd2g38bsmzQfw?si=1EORHiUQSzuB7Fuz51A6uw
+  :flair: So Help Me
+:howtosaveaplanet:
+  :url: https://gimletmedia.com/shows/howtosaveaplanet/episodes
+  :flair: How To Save a Planet
