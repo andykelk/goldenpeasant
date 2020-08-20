@@ -25,7 +25,12 @@ class Feed
              else
                Parser::GimletMedia.new
              end
-    filter_seen(parser.parse(feed: self, html: html))
+    new_items = filter_seen(parser.parse(feed: self, html: html))
+    if new_items.length > 3
+      logger.error "Sanity Check: there are #{new_items.length} items"
+      new_items = []
+    end
+    new_items
   end
 
   def filter_seen(items)
