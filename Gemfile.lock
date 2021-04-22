@@ -26,7 +26,7 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
-    oauth (0.5.3)
+    oauth (0.5.5)
     public_suffix (2.0.5)
     redd (0.8.8)
       http (~> 2.2)
@@ -61,7 +61,7 @@ DEPENDENCIES
   faraday
   faraday_middleware
   nokogiri (~> 1.10.8)
-  oauth (~> 0.5.1)
+  oauth (~> 0.5.5)
   redd
   rspec
   simple_oauth
