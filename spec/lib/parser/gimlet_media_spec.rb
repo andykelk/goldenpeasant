@@ -7,13 +7,14 @@ describe Parser::GimletMedia do
   end
 
   it "can parse an example page" do
-    feed = File.open(File.join('spec', 'fixtures', 'pages', 'uncivil.html')) { |f| Nokogiri::HTML(f) }
-    items = Parser::GimletMedia.new.parse(feed, 'https://www.gimletmedia.com/uncivil/all')
+    html = File.open(File.join('spec', 'fixtures', 'pages', 'uncivil.html')) { |f| Nokogiri::HTML(f) }
+    feed = double('feed', url: 'https://www.gimletmedia.com/uncivil/all')
+    items = Parser::GimletMedia.new.parse(feed: feed, html: html)
     expect(items).to be_a(Array)
     expect(items.length).to eq(12)
     items.each do |item|
-      expect(item[:url]).to match(/^https:\/\/www.gimletmedia.com\/uncivil/)
-      expect(item[:title]).to match(/^Uncivil - /)
+      expect(item.url).to match(/^https:\/\/www.gimletmedia.com\/uncivil/)
+      expect(item.title).to match(/^Uncivil - /)
     end
   end
 end

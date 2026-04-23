@@ -2,6 +2,8 @@ require './lib/notifier/stdout'
 
 describe Notifier::Stdout do
   it 'outputs to stdout' do
-    expect { Notifier::Stdout.new.notify('Monkey', 'http://monkey.com/') }.to output("http://monkey.com/\tMonkey\n").to_stdout
+    feed = double('feed', twitter_handle: '@test', has_twitter?: true)
+    item = double('item', title: 'Monkey', url: 'http://monkey.com/', feed: feed)
+    expect { Notifier::Stdout.new.notify(item) }.to output("Monkey http://monkey.com/ true @test\n").to_stdout
   end
 end

@@ -145,6 +145,39 @@ http_interactions:
       encoding: UTF-8
       string: '{"json": {"errors": [], "data": {"url": "https://www.reddit.com/r/gimlet/comments/7y537h/monkey/",
         "id": "7y537h", "name": "t3_7y537h"}}}'
-    http_version: 
+    http_version:
   recorded_at: Sat, 17 Feb 2018 06:30:57 GMT
+- request:
+    method: post
+    uri: https://oauth.reddit.com/r/gimlet/api/flair?api_type=json&raw_json=1
+    body:
+      encoding: US-ASCII
+      string: text=podcast&link=t3_7y537h
+    headers:
+      User-Agent:
+      - Redd:GoldenPheasant:v1.0.0 (by /u/mopoke)
+      Authorization:
+      - Bearer -mEcqnMAOT_Hd_XUsZsLRKCYSDo
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Cache-Control:
+      - max-age=0, must-revalidate
+      Date:
+      - Sat, 17 Feb 2018 06:30:58 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"json": {"errors": []}}'
+    http_version:
+  recorded_at: Sat, 17 Feb 2018 06:30:58 GMT
 recorded_with: VCR 4.0.0

@@ -1,4 +1,5 @@
 require 'redd'
+require './lib/patches/redd_ruby3'
 require './lib/logging'
 
 module Notifier

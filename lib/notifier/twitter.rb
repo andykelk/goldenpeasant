@@ -1,5 +1,5 @@
 require 'faraday'
-require 'faraday_middleware'
+require 'faraday-oauth'
 require './lib/logging'
 
 module Notifier

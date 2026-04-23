@@ -1,74 +1,162 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.5.1)
-      public_suffix (~> 2.0, >= 2.0.2)
-    crack (0.4.3)
-      safe_yaml (~> 1.0.0)
-    diff-lcs (1.3)
-    domain_name (0.5.20170404)
-      unf (>= 0.0.5, < 1.0.0)
-    faraday (0.12.1)
-      multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.12.2)
-      faraday (>= 0.7.4, < 1.0)
-    hashdiff (0.3.7)
+    addressable (2.9.0)
+      public_suffix (>= 2.0.2, < 8.0)
+    base64 (0.3.0)
+    bigdecimal (4.1.2)
+    cgi (0.5.1)
+    crack (1.0.1)
+      bigdecimal
+      rexml
+    diff-lcs (1.6.2)
+    domain_name (0.6.20240107)
+    faraday (2.14.1)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.2)
+      net-http (~> 0.5)
+    faraday-oauth (0.1.1)
+      faraday (~> 2.0)
+      simple_oauth (~> 0.3)
+    hashdiff (1.2.1)
+    hashie (5.1.0)
+      logger
     http (2.2.2)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 1.0.1)
       http_parser.rb (~> 0.6.0)
-    http-cookie (1.0.3)
+    http-cookie (1.1.6)
       domain_name (~> 0.5)
     http-form_data (1.0.3)
     http_parser.rb (0.6.0)
-    mini_portile2 (2.8.0)
-    multipart-post (2.0.0)
-    nokogiri (1.13.9)
-      mini_portile2 (~> 2.8.0)
+    json (2.19.4)
+    logger (1.7.0)
+    net-http (0.9.1)
+      uri (>= 0.11.1)
+    nokogiri (1.19.2-aarch64-linux-gnu)
       racc (~> 1.4)
-    oauth (0.5.3)
-    public_suffix (2.0.5)
-    racc (1.6.0)
+    nokogiri (1.19.2-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.19.2-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.2-arm-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.19.2-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.2-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.19.2-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.19.2-x86_64-linux-musl)
+      racc (~> 1.4)
+    oauth (1.1.3)
+      base64 (~> 0.1)
+      oauth-tty (~> 1.0, >= 1.0.6)
+      snaky_hash (~> 2.0)
+      version_gem (~> 1.1, >= 1.1.9)
+    oauth-tty (1.0.6)
+      version_gem (~> 1.1, >= 1.1.9)
+    public_suffix (7.0.5)
+    racc (1.8.1)
     redd (0.8.8)
       http (~> 2.2)
-    rspec (3.7.0)
-      rspec-core (~> 3.7.0)
-      rspec-expectations (~> 3.7.0)
-      rspec-mocks (~> 3.7.0)
-    rspec-core (3.7.1)
-      rspec-support (~> 3.7.0)
-    rspec-expectations (3.7.0)
+    rexml (3.4.4)
+    rspec (3.13.2)
+      rspec-core (~> 3.13.0)
+      rspec-expectations (~> 3.13.0)
+      rspec-mocks (~> 3.13.0)
+    rspec-core (3.13.6)
+      rspec-support (~> 3.13.0)
+    rspec-expectations (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-mocks (3.7.0)
+      rspec-support (~> 3.13.0)
+    rspec-mocks (3.13.8)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.7.0)
-    rspec-support (3.7.1)
-    safe_yaml (1.0.4)
-    simple_oauth (0.3.1)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.7.4)
-    vcr (4.0.0)
-    webmock (3.3.0)
-      addressable (>= 2.3.6)
+      rspec-support (~> 3.13.0)
+    rspec-support (3.13.7)
+    simple_oauth (0.4.1)
+      base64
+      cgi
+    snaky_hash (2.0.3)
+      hashie (>= 0.1.0, < 6)
+      version_gem (>= 1.1.8, < 3)
+    uri (1.1.1)
+    vcr (6.4.0)
+    version_gem (1.1.9)
+    webmock (3.26.2)
+      addressable (>= 2.8.0)
       crack (>= 0.3.2)
-      hashdiff
+      hashdiff (>= 0.4.0, < 2.0.0)
 
 PLATFORMS
-  ruby
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
-  faraday
-  faraday_middleware
-  nokogiri (~> 1.13.9)
-  oauth (~> 0.5.1)
+  faraday (~> 2.0)
+  faraday-oauth
+  nokogiri (~> 1.18)
+  oauth (~> 1.0)
   redd
   rspec
   simple_oauth
   vcr
   webmock
 
+CHECKSUMS
+  addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
+  base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
+  bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
+  cgi (0.5.1) sha256=e93fcafc69b8a934fe1e6146121fa35430efa8b4a4047c4893764067036f18e9
+  crack (1.0.1) sha256=ff4a10390cd31d66440b7524eb1841874db86201d5b70032028553130b6d4c7e
+  diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
+  domain_name (0.6.20240107) sha256=5f693b2215708476517479bf2b3802e49068ad82167bcd2286f899536a17d933
+  faraday (2.14.1) sha256=a43cceedc1e39d188f4d2cdd360a8aaa6a11da0c407052e426ba8d3fb42ef61c
+  faraday-net_http (3.4.2) sha256=f147758260d3526939bf57ecf911682f94926a3666502e24c69992765875906c
+  faraday-oauth (0.1.1) sha256=dc2aa5f597de9f2e5c2f7adf6dca8480f47648ba2b199ff8d7f79cfa8c02a861
+  hashdiff (1.2.1) sha256=9c079dbc513dfc8833ab59c0c2d8f230fa28499cc5efb4b8dd276cf931457cd1
+  hashie (5.1.0) sha256=c266471896f323c446ea8207f8ffac985d2718df0a0ba98651a3057096ca3870
+  http (2.2.2) sha256=391515043d4a37cdd6856b8bbf4f8af70fba1a9008ba77ae9f39d48d2e4e8dcd
+  http-cookie (1.1.6) sha256=ba4b82be64de61dc281243dac70e3c382c45142f20268ed9276a3670c93feaa9
+  http-form_data (1.0.3) sha256=1578934f15091d218e036c9e467a685f534793f08f61cd286013b9eb16e70d49
+  http_parser.rb (0.6.0) sha256=f11d0aec50ef26a7d1f991e627ac88acdb5979282aeba7a5c3be6ce0636ed196
+  json (2.19.4) sha256=670a7d333fb3b18ca5b29cb255eb7bef099e40d88c02c80bd42a3f30fe5239ac
+  logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
+  net-http (0.9.1) sha256=25ba0b67c63e89df626ed8fac771d0ad24ad151a858af2cc8e6a716ca4336996
+  nokogiri (1.19.2-aarch64-linux-gnu) sha256=c34d5c8208025587554608e98fd88ab125b29c80f9352b821964e9a5d5cfbd19
+  nokogiri (1.19.2-aarch64-linux-musl) sha256=7f6b4b0202d507326841a4f790294bf75098aef50c7173443812e3ac5cb06515
+  nokogiri (1.19.2-arm-linux-gnu) sha256=b7fa1139016f3dc850bda1260988f0d749934a939d04ef2da13bec060d7d5081
+  nokogiri (1.19.2-arm-linux-musl) sha256=61114d44f6742ff72194a1b3020967201e2eb982814778d130f6471c11f9828c
+  nokogiri (1.19.2-arm64-darwin) sha256=58d8ea2e31a967b843b70487a44c14c8ba1866daa1b9da9be9dbdf1b43dee205
+  nokogiri (1.19.2-x86_64-darwin) sha256=7d9af11fda72dfaa2961d8c4d5380ca0b51bc389dc5f8d4b859b9644f195e7a4
+  nokogiri (1.19.2-x86_64-linux-gnu) sha256=fa8feca882b73e871a9845f3817a72e9734c8e974bdc4fbad6e4bc6e8076b94f
+  nokogiri (1.19.2-x86_64-linux-musl) sha256=93128448e61a9383a30baef041bf1f5817e22f297a1d400521e90294445069a8
+  oauth (1.1.3) sha256=71ca1b534561bf31a9b2aee01147384064b555e796d1a0fe2591806bb4bdd633
+  oauth-tty (1.0.6) sha256=9e8bd1861d367cce18318d8f214f2e1a1d7cb3898de0a9ea79162b4fdecb3152
+  public_suffix (7.0.5) sha256=1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623
+  racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
+  redd (0.8.8) sha256=2bade5c3cd3f5731d9319b4975328b719b2ade6f3e29e18fb4d0ffeeace243ae
+  rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
+  rspec (3.13.2) sha256=206284a08ad798e61f86d7ca3e376718d52c0bc944626b2349266f239f820587
+  rspec-core (3.13.6) sha256=a8823c6411667b60a8bca135364351dda34cd55e44ff94c4be4633b37d828b2d
+  rspec-expectations (3.13.5) sha256=33a4d3a1d95060aea4c94e9f237030a8f9eae5615e9bd85718fe3a09e4b58836
+  rspec-mocks (3.13.8) sha256=086ad3d3d17533f4237643de0b5c42f04b66348c28bf6b9c2d3f4a3b01af1d47
+  rspec-support (3.13.7) sha256=0640e5570872aafefd79867901deeeeb40b0c9875a36b983d85f54fb7381c47c
+  simple_oauth (0.4.1) sha256=d4f054685a8bb8661cd4f3010ebfc074d92d538366dcee35eece01d2d8c90660
+  snaky_hash (2.0.3) sha256=25a3d299566e8153fb02fa23fd9a9358845950f7a523ddbbe1fa1e0d79a6d456
+  uri (1.1.1) sha256=379fa58d27ffb1387eaada68c749d1426738bd0f654d812fcc07e7568f5c57c6
+  vcr (6.4.0) sha256=077ac92cc16efc5904eb90492a18153b5e6ca5398046d8a249a7c96a9ea24ae6
+  version_gem (1.1.9) sha256=0c1a0962ae543c84a00889bb018d9f14d8f8af6029d26b295d98774e3d2eb9a4
+  webmock (3.26.2) sha256=774556f2ea6371846cca68c01769b2eac0d134492d21f6d0ab5dd643965a4c90
+
 BUNDLED WITH
-   1.15.3
+  4.0.3

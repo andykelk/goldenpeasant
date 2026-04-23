@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 gem "redd"
-gem "nokogiri", '~> 1.13.9'
-gem "faraday"
-gem "faraday_middleware"
+gem "nokogiri", '~> 1.18'
+gem "faraday", '~> 2.0'
+gem "faraday-oauth"
 gem "simple_oauth"
-gem "oauth", '~> 0.5.1'
+gem "oauth", '~> 1.0'
 
 group :development do
   gem "vcr"
