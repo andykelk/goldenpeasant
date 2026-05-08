@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem "redd"
-gem "nokogiri", '~> 1.18'
+gem "nokogiri", '~> 1.19'
 gem "faraday", '~> 2.0'
 gem "faraday-oauth"
 gem "simple_oauth"
