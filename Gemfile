@@ -5,7 +5,7 @@ gem "nokogiri", '~> 1.19'
 gem "faraday", '~> 2.14'
 gem "faraday-oauth"
 gem "simple_oauth"
-gem "oauth", '~> 1.0'
+gem "oauth", '~> 1.1'
 
 group :development do
   gem "vcr"
